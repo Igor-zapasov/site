@@ -44,6 +44,10 @@ header {
                 text-align: center;
             }
         }
+        
+        .burger {
+            display: none;
+        }
     }
 
 }
@@ -51,29 +55,33 @@ header {
 main {
     .group_flex{
         display: flex;
-        max-width: 891px;
+        max-width: 1280px;
         width: 100%;
         margin: 0 auto;
 
-        justify-content: space-between;
+        justify-content: center;
         align-items: center;
         gap: 60px;
-
+        flex-wrap: wrap;
 
         & h1{
+            width: 415px;
             color: rgb(228, 228, 228);
             font-family: Inter;
             font-size: 50px;
             font-weight: 400;
             line-height: 1.5;
             letter-spacing: 0px;
+            text-align: center;
         }
 
         & button {
-            width: 220px;
-            height: 49px;
+            display: block;
+            width: 250px;
+            height: 61px;
             border-radius: 7px;
             background-color: rgb(195, 117, 0);
+            margin: 44px auto 0;
         }
     }
     
@@ -101,7 +109,7 @@ main {
     width: 100%;
 
 
-}
+}a
 & img{
     width: 391px;
     height: 398px;
@@ -170,4 +178,37 @@ footer {
         }
     }
 
+}
+
+@media screen and (width < 770px){
+    
+    header{
+       & nav{
+        & ul{
+            display: none;
+        }
+        .burger {
+            display: block;
+        }
+       }
+       main {
+            .gallery{
+                & a
+                & img {
+                    width: 100%;
+                }
+            }
+       }
+    }
+}
+@media screen and (width < 770px){
+    main{
+        .group_flex{
+            & img{
+                width: 250px;
+                height: 250px;
+            }
+        }
+    }
+    
 }
